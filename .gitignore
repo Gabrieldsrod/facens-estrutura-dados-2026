@@ -53,3 +53,20 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Arquivos de objeto compilados
+*.o
+
+# Arquivos executáveis e bibliotecas (Windows)
+*.exe
+*.dll
+*.a
+
+# Arquivos gerados automaticamente pelo Dev-C++
+Makefile.win
+*.layout
+*.res
+
+# Arquivos de log e crash (Geral)
+*.log
+*.dmp
