@@ -12,7 +12,7 @@ int size(Bag *b){
 	int i, count = 0;
 	
 	for (i = 0; i < BAGSIZE; i++){
-		if (b->item != -1)
+		if (b->item[i] != -1)
 			count++;
 	}
 	return count;
@@ -23,7 +23,7 @@ int insert(Bag *b, int elem){
 	int i;
 	
 	for (i = 0; i < BAGSIZE; i++) {
-		if (b->item == -1) {
+		if (b->item[i] == -1) {
 			b->item[i] = elem;
 			return 1;
 		}	
@@ -35,8 +35,8 @@ int insert(Bag *b, int elem){
 int check(Bag *b, int elem){
 	int i, count = 0;
 	
-	for (i = 0; i < BAGSIZE && b->item[i] !=-1; i++) {
-		if (b->item == elem)
+	for (i = 0; i < BAGSIZE; i++) {
+		if (b->item[i] == elem)
 			count++;
 	}
 	return count;
@@ -47,7 +47,7 @@ int delete(Bag *b, int elem){
 	int i, count = 0;
 	
 	for (i = 0; i < BAGSIZE && b->item[i] !=-1; i++) {
-		if (b->item == elem) {
+		if (b->item[i] == elem) {
 			b->item[i] = -1;
 			return 1;
 		}
@@ -59,9 +59,11 @@ int delete(Bag *b, int elem){
 void printall(Bag b){
 	int i;
 	
-	for (i = 0; i < BAGSIZE && b.item != -1; i++) {
-		printf("%i\n", b.item[i]);
-	}
-	
+	for (i = 0; i < BAGSIZE; i++) {
+
+		if (b.item[i] != -1) {
+			printf("%i ", b.item[i]);
+		}
+}
 }
 
