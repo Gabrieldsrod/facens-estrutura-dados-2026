@@ -70,3 +70,6 @@ Makefile.win
 # Arquivos de log e crash (Geral)
 *.log
 *.dmp
+
+# Diretório de configurações do VS Code
+.vscode/
