@@ -118,7 +118,7 @@ void ordena(Lista *p_l){
 /* Remove o elemento que está no início da lista.
 Retorna 0 caso a lista esteja vazia */
 int remove_inicio(Lista *p_l, elem_t *p_e){
-	if (vazia(*p_l))
+	if (vazia(p_l))
 		return 0;
 	
 	No_lista *aux;
@@ -206,7 +206,7 @@ void inverte(Lista *p_l){
 
 /* Remove todos os nós da lista */
 void libera(Lista *p_l){
-	if (vazia(*p_l))
+	if (vazia(p_l))
 		return;
 		
 	No_lista *atual, *prox;
